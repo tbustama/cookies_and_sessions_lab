@@ -4,8 +4,8 @@
 <% end %>
 </ul></h4>
 <% end %>
-<%= form_for "product", :url => add_path("product") do |f|%>
-    <%= f.label "product" %>
-    <%= f.text_field "product" %> <br><br>
-    <%= f.submit "add to cart"%>
-<% end %>
+
+<form method="post" action= "/products/add">
+  <input name='product'>
+  <input type='submit' value='add to cart'>
+</form> 
