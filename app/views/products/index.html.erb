@@ -1,0 +1,11 @@
+<% if session[:cart] %>
+<h4><ul><% session[:cart].each do |product|%>
+    <li><%= product %></li>
+<% end %>
+</ul></h4>
+<% end %>
+<%= form_for "product", :url => add_path("product") do |f|%>
+    <%= f.label "product" %>
+    <%= f.text_field "product" %> <br><br>
+    <%= f.submit "add to cart"%>
+<% end %>
